@@ -42,7 +42,7 @@ struct SignInWithCoinbaseView: View {
 
 extension SignInWithCoinbaseView {
     private static var redirectUrl: String {
-        return "https://top-lion-7.clerk.accounts.dev/v1/oauth_callback"
+        return "https://top-lion-7.clerk.accounts.dev/v1/oauth_callback/ios/fb.CoinbaseDaily/callback"
     }
     func signIn() async {
         do {
