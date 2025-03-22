@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DC04C9322D6A193900179EDD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC04C9312D6A193800179EDD /* WidgetKit.framework */; };
+		DC04C9342D6A193900179EDD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC04C9332D6A193900179EDD /* SwiftUI.framework */; };
+		DC04C9452D6A193A00179EDD /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DC04C92F2D6A193800179EDD /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DCECB6062D8F3B5B00ACBC83 /* Clerk in Frameworks */ = {isa = PBXBuildFile; productRef = DCECB6052D8F3B5B00ACBC83 /* Clerk */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DC04C90F2D6A18F300179EDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +28,48 @@
 			remoteGlobalIDString = DC04C8FD2D6A18F100179EDD;
 			remoteInfo = CoinbaseDaily;
 		};
+		DC04C9432D6A193A00179EDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC04C8F62D6A18F100179EDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC04C92E2D6A193800179EDD;
+			remoteInfo = widgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC04C94A2D6A193A00179EDD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DC04C9452D6A193A00179EDD /* widgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DC04C8FE2D6A18F100179EDD /* CoinbaseDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinbaseDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC04C90E2D6A18F300179EDD /* CoinbaseDailyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinbaseDailyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC04C9182D6A18F300179EDD /* CoinbaseDailyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinbaseDailyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC04C92F2D6A193800179EDD /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC04C9312D6A193800179EDD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		DC04C9332D6A193900179EDD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		DCECB60B2D8F453B00ACBC83 /* widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DC04C9462D6A193A00179EDD /* Exceptions for "widget" folder in "widgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DC04C92E2D6A193800179EDD /* widgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DC04C9002D6A18F100179EDD /* CoinbaseDaily */ = {
@@ -45,6 +87,14 @@
 			path = CoinbaseDailyUITests;
 			sourceTree = "<group>";
 		};
+		DC04C9352D6A193900179EDD /* widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DC04C9462D6A193A00179EDD /* Exceptions for "widget" folder in "widgetExtension" target */,
+			);
+			path = widget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCECB6062D8F3B5B00ACBC83 /* Clerk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,15 +120,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC04C92C2D6A193800179EDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC04C9342D6A193900179EDD /* SwiftUI.framework in Frameworks */,
+				DC04C9322D6A193900179EDD /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		DC04C8F52D6A18F100179EDD = {
 			isa = PBXGroup;
 			children = (
+				DCECB60B2D8F453B00ACBC83 /* widgetExtension.entitlements */,
 				DC04C9002D6A18F100179EDD /* CoinbaseDaily */,
 				DC04C9112D6A18F300179EDD /* CoinbaseDailyTests */,
 				DC04C91B2D6A18F300179EDD /* CoinbaseDailyUITests */,
+				DC04C9352D6A193900179EDD /* widget */,
+				DC04C9302D6A193800179EDD /* Frameworks */,
 				DC04C8FF2D6A18F100179EDD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +151,18 @@
 				DC04C8FE2D6A18F100179EDD /* CoinbaseDaily.app */,
 				DC04C90E2D6A18F300179EDD /* CoinbaseDailyTests.xctest */,
 				DC04C9182D6A18F300179EDD /* CoinbaseDailyUITests.xctest */,
+				DC04C92F2D6A193800179EDD /* widgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DC04C9302D6A193800179EDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC04C9312D6A193800179EDD /* WidgetKit.framework */,
+				DC04C9332D6A193900179EDD /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,16 +175,19 @@
 				DC04C8FA2D6A18F100179EDD /* Sources */,
 				DC04C8FB2D6A18F100179EDD /* Frameworks */,
 				DC04C8FC2D6A18F100179EDD /* Resources */,
+				DC04C94A2D6A193A00179EDD /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DC04C9442D6A193A00179EDD /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				DC04C9002D6A18F100179EDD /* CoinbaseDaily */,
 			);
 			name = CoinbaseDaily;
 			packageProductDependencies = (
+				DCECB6052D8F3B5B00ACBC83 /* Clerk */,
 			);
 			productName = CoinbaseDaily;
 			productReference = DC04C8FE2D6A18F100179EDD /* CoinbaseDaily.app */;
@@ -163,6 +239,28 @@
 			productReference = DC04C9182D6A18F300179EDD /* CoinbaseDailyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		DC04C92E2D6A193800179EDD /* widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC04C9472D6A193A00179EDD /* Build configuration list for PBXNativeTarget "widgetExtension" */;
+			buildPhases = (
+				DC04C92B2D6A193800179EDD /* Sources */,
+				DC04C92C2D6A193800179EDD /* Frameworks */,
+				DC04C92D2D6A193800179EDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DC04C9352D6A193900179EDD /* widget */,
+			);
+			name = widgetExtension;
+			packageProductDependencies = (
+			);
+			productName = widgetExtension;
+			productReference = DC04C92F2D6A193800179EDD /* widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +282,9 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = DC04C8FD2D6A18F100179EDD;
 					};
+					DC04C92E2D6A193800179EDD = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = DC04C8F92D6A18F100179EDD /* Build configuration list for PBXProject "CoinbaseDaily" */;
@@ -195,6 +296,9 @@
 			);
 			mainGroup = DC04C8F52D6A18F100179EDD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DCECB6022D8F35FD00ACBC83 /* XCRemoteSwiftPackageReference "clerk-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DC04C8FF2D6A18F100179EDD /* Products */;
 			projectDirPath = "";
@@ -203,6 +307,7 @@
 				DC04C8FD2D6A18F100179EDD /* CoinbaseDaily */,
 				DC04C90D2D6A18F300179EDD /* CoinbaseDailyTests */,
 				DC04C9172D6A18F300179EDD /* CoinbaseDailyUITests */,
+				DC04C92E2D6A193800179EDD /* widgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +328,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DC04C9162D6A18F300179EDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC04C92D2D6A193800179EDD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +365,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC04C92B2D6A193800179EDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +384,11 @@
 			isa = PBXTargetDependency;
 			target = DC04C8FD2D6A18F100179EDD /* CoinbaseDaily */;
 			targetProxy = DC04C9192D6A18F300179EDD /* PBXContainerItemProxy */;
+		};
+		DC04C9442D6A193A00179EDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC04C92E2D6A193800179EDD /* widgetExtension */;
+			targetProxy = DC04C9432D6A193A00179EDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,9 +517,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoinbaseDaily/CoinbaseDaily.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoinbaseDaily/Preview Content\"";
+				DEVELOPMENT_TEAM = Z72BZ6TLAU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -421,9 +547,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoinbaseDaily/CoinbaseDaily.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoinbaseDaily/Preview Content\"";
+				DEVELOPMENT_TEAM = Z72BZ6TLAU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -512,6 +640,62 @@
 			};
 			name = Release;
 		};
+		DC04C9482D6A193A00179EDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z72BZ6TLAU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fb.CoinbaseDaily.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC04C9492D6A193A00179EDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z72BZ6TLAU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fb.CoinbaseDaily.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -551,7 +735,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		DC04C9472D6A193A00179EDD /* Build configuration list for PBXNativeTarget "widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC04C9482D6A193A00179EDD /* Debug */,
+				DC04C9492D6A193A00179EDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCECB6022D8F35FD00ACBC83 /* XCRemoteSwiftPackageReference "clerk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/clerk/clerk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.51.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCECB6052D8F3B5B00ACBC83 /* Clerk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCECB6022D8F35FD00ACBC83 /* XCRemoteSwiftPackageReference "clerk-ios" */;
+			productName = Clerk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC04C8F62D6A18F100179EDD /* Project object */;
 }
