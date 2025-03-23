@@ -11,13 +11,28 @@ import Clerk
 struct SignInWithCoinbaseView: View {
     @Environment(Clerk.self) private var clerk
     var body: some View {
-        VStack {
+        VStack(spacing: 24) {
             if let user = clerk.user {
                 UserProfileView(user: user)
                 Button("Sign out") {
                     Task { await signOut()}
                 }
             } else {
+                Image("app-icon")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100)
+                
+                Text("Welcome")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
+                Text("Log in to your Coinbase account so that the widget has access to your account data")
+                    .font(.subheadline)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.secondary)
+                    .padding(.horizontal)
+                
                 Button {
                     Task { await signIn() }
                 } label: {
@@ -46,7 +61,9 @@ extension SignInWithCoinbaseView {
     }
     func signIn() async {
         do {
-            try await SignIn.authenticateWithRedirect(strategy: .oauth(provider: .coinbase, redirectUrl: SignInWithCoinbaseView.redirectUrl))
+            let signIn = try await SignIn.create(strategy: .oauth(provider: .coinbase, redirectUrl: Self.redirectUrl))
+            let result = try await signIn.authenticateWithRedirect()
+            print("reuslt from signup: \(result)")
             if let jwt = try await getJWT() {
                 print("JWT for syncing \(jwt)")
                 saveToSharedDefaults(key: "JWT",value: jwt)

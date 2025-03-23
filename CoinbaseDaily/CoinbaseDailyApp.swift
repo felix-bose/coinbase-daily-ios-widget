@@ -14,9 +14,10 @@ struct CoinbaseDailyApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                    if clerk.isLoaded {
-                      ContentView()
-                    } else {
+                if clerk.isLoaded {
+                    ContentView().onOpenURL{
+                        url in print("callback url to app \(url)")
+                    } }else {
                       ProgressView()
                     }
                   }

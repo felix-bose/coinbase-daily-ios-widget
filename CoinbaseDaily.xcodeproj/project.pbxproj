@@ -69,11 +69,21 @@
 			);
 			target = DC04C92E2D6A193800179EDD /* widgetExtension */;
 		};
+		DCA873CB2D9058CA002D5AD1 /* Exceptions for "CoinbaseDaily" folder in "CoinbaseDaily" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DC04C8FD2D6A18F100179EDD /* CoinbaseDaily */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DC04C9002D6A18F100179EDD /* CoinbaseDaily */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DCA873CB2D9058CA002D5AD1 /* Exceptions for "CoinbaseDaily" folder in "CoinbaseDaily" target */,
+			);
 			path = CoinbaseDaily;
 			sourceTree = "<group>";
 		};
